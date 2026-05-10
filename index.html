@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日投資晨報 2026-05-10</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:"Segoe UI",system-ui,sans-serif;padding:20px 24px;min-height:100vh}
+.header{text-align:center;padding:28px 0 18px;border-bottom:1px solid #21262d;margin-bottom:28px}
+.header h1{font-size:1.75em;color:#58a6ff;letter-spacing:.06em}
+.header .ts{color:#6e7681;margin-top:6px;font-size:.85em}
+.sec-title{font-size:1em;color:#58a6ff;margin:24px 0 12px;padding-left:9px;
+            border-left:3px solid #58a6ff;letter-spacing:.04em;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:8px}
+.card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:16px 18px;
+       display:flex;flex-direction:column}
+.card-label{color:#6e7681;font-size:.8em;letter-spacing:.06em;margin-bottom:6px}
+.price{font-size:1.85em;font-weight:700;margin-bottom:2px}
+.chg{font-size:.92em;margin-bottom:12px}
+.ema-row{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;font-size:.76em;color:#6e7681;
+          border-top:1px solid #21262d;padding-top:10px;margin-bottom:12px;text-align:center}
+.signals{display:flex;justify-content:space-around;border-top:1px solid #21262d;padding-top:11px;margin-top:auto}
+.sig{text-align:center}
+.sig-lbl{font-size:.73em;color:#6e7681;margin-bottom:4px}
+.sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:8px}
+@media(max-width:900px){.sector-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.sector-grid{grid-template-columns:1fr}}
+.stbl{background:#161b22;border:1px solid #21262d;border-radius:10px;overflow:hidden}
+.stbl-hdr{padding:9px 14px;font-size:.83em;font-weight:600;border-bottom:1px solid #21262d}
+.stbl table{width:100%;border-collapse:collapse}
+.stbl td{padding:9px 14px;font-size:.87em;border-bottom:1px solid #21262d}
+.stbl tr:last-child td{border-bottom:none}
+.rank{color:#6e7681;width:34px}
+.stgy-card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 20px;margin-bottom:8px}
+.stgy-grid{display:grid;grid-template-columns:220px 1fr;gap:24px;margin-bottom:14px}
+@media(max-width:640px){.stgy-grid{grid-template-columns:1fr}}
+.stgy-lbl{color:#6e7681;font-size:.78em;letter-spacing:.05em;margin-bottom:6px;font-weight:600;text-transform:uppercase}
+.stgy-level{font-size:2em;font-weight:700;margin-bottom:8px;line-height:1}
+.stgy-bar-bg{background:#21262d;border-radius:4px;height:6px;margin-bottom:10px}
+.stgy-bar{height:6px;border-radius:4px}
+.stgy-tag{font-size:.88em;font-weight:600}
+.stgy-body{font-size:.87em;color:#c9d1d9;line-height:1.75}
+.stgy-foot{border-top:1px solid #21262d;padding-top:10px;font-size:.80em;color:#6e7681;display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.news-box{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:16px 18px;margin-bottom:8px}
+.news-box ul{list-style:none}
+.news-box li{padding:8px 0;border-bottom:1px solid #21262d;font-size:.88em}
+.news-box li:last-child{border-bottom:none}
+.news-box a{color:#e6edf3;text-decoration:none}
+.news-box a:hover{color:#58a6ff}
+.ndate{display:block;color:#6e7681;font-size:.78em;margin-top:3px}
+.wg-card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:4px 0;margin-bottom:8px}
+.wg-tbl{width:100%;border-collapse:collapse}
+.wg-tbl tr{border-bottom:1px solid #21262d}
+.wg-tbl tr:last-child{border-bottom:none}
+.wg-tbl td{padding:10px 16px;font-size:.86em;vertical-align:middle}
+.wg-lbl{width:160px;color:#6e7681;white-space:nowrap}
+.wg-right{text-align:right;white-space:nowrap;width:260px}
+.wg-link{color:#6e7681;text-decoration:none}
+.wg-link:hover{color:#58a6ff}
+.wg-split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.wg-split{grid-template-columns:1fr}}
+.wg-half{padding:4px 0}
+.wg-ft-title{color:#6e7681;font-size:.78em;font-weight:600;padding:10px 16px 6px;letter-spacing:.04em}
+.wg-ft-tbl th{padding:7px 14px;font-size:.78em;color:#6e7681;border-bottom:1px solid #21262d;font-weight:600}
+.wg-ft-date{color:#6e7681;white-space:nowrap;width:60px}
+.footer{text-align:center;color:#6e7681;font-size:.78em;padding:22px 0;border-top:1px solid #21262d;margin-top:24px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>每日投資晨報</h1>
+  <div class="ts">2026年05月10日  14:41 產生</div>
+</div>
+
+<div class="sec-title">大盤指數 — MA 多空判斷</div>
+<div class="cards"><div class="card">
+      <div class="card-label"><a href="https://www.wantgoo.com/index/0000" target="_blank" style="color:#8b949e;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#8b949e'">台灣加權指數</a></div>
+      <div class="price">41,603.94</div>
+      <div class="chg"><span style="color:#00b07a">-0.79</span>%&nbsp;&nbsp;<span style="color:#00b07a">-329.84</span></div>
+      <div class="ema-row">
+        <span>MA5&nbsp;<b>41,230.20</b></span>
+        <span>MA20&nbsp;<b>38,521.91</b></span>
+        <span>MA200&nbsp;<b>29,232.15</b></span>
+      </div>
+      <div class="signals">
+        <div class="sig"><div class="sig-lbl">短期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">中期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">長期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+      </div>
+    </div><div class="card">
+      <div class="card-label"><a href="https://www.wantgoo.com/index/two" target="_blank" style="color:#8b949e;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#8b949e'">台股櫃買指數</a></div>
+      <div class="price">409.44</div>
+      <div class="chg"><span style="color:#00b07a">-1.67</span>%&nbsp;&nbsp;<span style="color:#00b07a">-6.97</span></div>
+      <div class="ema-row">
+        <span>MA5&nbsp;<b>408.37</b></span>
+        <span>MA20&nbsp;<b>382.81</b></span>
+        <span>MA200&nbsp;<b>282.31</b></span>
+      </div>
+      <div class="signals">
+        <div class="sig"><div class="sig-lbl">短期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">中期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">長期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+      </div>
+    </div><div class="card">
+      <div class="card-label"><a href="https://www.wantgoo.com/global/sp5" target="_blank" style="color:#8b949e;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#8b949e'">標普 500</a></div>
+      <div class="price">7,398.93</div>
+      <div class="chg"><span style="color:#e8323c">+0.84</span>%&nbsp;&nbsp;<span style="color:#e8323c">+61.82</span></div>
+      <div class="ema-row">
+        <span>MA5&nbsp;<b>7,312.23</b></span>
+        <span>MA20&nbsp;<b>7,153.87</b></span>
+        <span>MA200&nbsp;<b>6,753.41</b></span>
+      </div>
+      <div class="signals">
+        <div class="sig"><div class="sig-lbl">短期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">中期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">長期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+      </div>
+    </div><div class="card">
+      <div class="card-label"><a href="https://www.wantgoo.com/global/nas" target="_blank" style="color:#8b949e;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#8b949e'">那斯達克</a></div>
+      <div class="price">26,247.08</div>
+      <div class="chg"><span style="color:#e8323c">+1.71</span>%&nbsp;&nbsp;<span style="color:#e8323c">+440.88</span></div>
+      <div class="ema-row">
+        <span>MA5&nbsp;<b>25,657.23</b></span>
+        <span>MA20&nbsp;<b>24,726.20</b></span>
+        <span>MA200&nbsp;<b>22,826.96</b></span>
+      </div>
+      <div class="signals">
+        <div class="sig"><div class="sig-lbl">短期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">中期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">長期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+      </div>
+    </div><div class="card">
+      <div class="card-label"><a href="https://www.wantgoo.com/global/sox" target="_blank" style="color:#8b949e;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#8b949e'">費城半導體 SOX</a></div>
+      <div class="price">11,775.50</div>
+      <div class="chg"><span style="color:#e8323c">+5.51</span>%&nbsp;&nbsp;<span style="color:#e8323c">+614.51</span></div>
+      <div class="ema-row">
+        <span>MA5&nbsp;<b>11,184.90</b></span>
+        <span>MA20&nbsp;<b>10,193.73</b></span>
+        <span>MA200&nbsp;<b>7,344.12</b></span>
+      </div>
+      <div class="signals">
+        <div class="sig"><div class="sig-lbl">短期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">中期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+        <div class="sig"><div class="sig-lbl">長期</div><span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span></div>
+      </div>
+    </div></div>
+
+<div class="sec-title">建議資金水位 ／ 操作避險策略</div>
+<div class="stgy-card">
+  <div class="stgy-grid">
+    <div class="stgy-left">
+      <div class="stgy-lbl">建議資金水位</div>
+      <div class="stgy-level" style="color:#e8323c">80 – 100%</div>
+      <div class="stgy-bar-bg"><div class="stgy-bar" style="width:90%;background:#e8323c"></div></div>
+      <div class="stgy-tag" style="color:#e8323c">全面多頭，積極持股</div>
+    </div>
+    <div class="stgy-right">
+      <div class="stgy-lbl">操作避險策略</div>
+      <div class="stgy-body">5/20MA 趨勢向上，環境安全。可使用 2–3 倍實質槓桿，以金字塔方式（2/3/5）分批加碼強勢族群龍頭。無需對沖；若大盤短線震盪，抱住核心倉（70%）不動，以 5MA 管理減碼倉（30%）。</div>
+    </div>
+  </div>
+  <div class="stgy-foot">
+    依據：台灣加權指數 &nbsp;
+    短期&nbsp;<span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span>&nbsp;&nbsp;中期&nbsp;<span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span>&nbsp;&nbsp;長期&nbsp;<span style="background:#e8323c;color:#fff;padding:3px 12px;border-radius:4px;font-weight:700;font-size:.82em">多</span>
+  </div>
+</div>
+
+<div class="sec-title">台股外資散戶期貨觀察</div>
+<div class="wg-card">
+  <div class="wg-split"><div class="wg-half">
+  <table class="wg-tbl"><tr><td class="wg-lbl"><a href="https://www.wantgoo.com/stock/institutional-investors/three-trade-for-trading-amount" target="_blank" class="wg-link">三大法人買賣超(億)</a></td><td>外資 <span style="color:#00b07a;font-weight:600">-120.85</span> &nbsp;投信 <span style="color:#e8323c;font-weight:600">+19.57</span> &nbsp;自營 <span style="color:#00b07a;font-weight:600">-100.37</span>&nbsp;&nbsp;合計 <span style="color:#00b07a;font-weight:600">-201.64</span></td></tr><tr><td class="wg-lbl"><a href="https://www.wantgoo.com/stock/margin-trading/market-price/taiex" target="_blank" class="wg-link">融資餘額</a></td><td>餘額 <b>4,771.85億</b> &nbsp;增減 <span style="color:#00b07a;font-weight:600">-54.79億</span> &nbsp;使用率 <b>197.95%</b></td></tr><tr><td class="wg-lbl"><a href="https://www.wantgoo.com/option/put-call-ratio" target="_blank" class="wg-link">P/C Ratio（未平倉）</a></td><td><b style="color:#e8323c">181.36%</b> <span style="color:#6e7681;font-size:.78em">偏多</span></td></tr><tr><td class="wg-lbl"><a href="https://www.wantgoo.com/futures/retail-indicator/wmt&" target="_blank" class="wg-link">小台散戶多空比</a></td><td>做多 <b>32,784</b> &nbsp;做空 <b>29,122</b> &nbsp;&nbsp;多空比 <span style="color:#e8323c;font-weight:600">+9.33%</span> <span style="color:#6e7681;font-size:.78em">偏多（留意賣壓）</span></td></tr><tr><td class="wg-lbl"><a href="https://www.wantgoo.com/futures/retail-indicator/wtm&" target="_blank" class="wg-link">微台散戶多空比</a></td><td>做多 <b>55,877</b> &nbsp;做空 <b>39,649</b> &nbsp;&nbsp;多空比 <span style="color:#e8323c;font-weight:600">+26.66%</span> <span style="color:#6e7681;font-size:.78em">偏多（留意賣壓）</span></td></tr></table>
+</div><div class="wg-half">
+  <table class="wg-tbl wg-ft-tbl">
+    <thead><tr>
+      <th style="white-space:nowrap"><a href="https://www.wantgoo.com/futures/institutional-investors/bull-bear-open-interest" target="_blank" class="wg-link">外資期貨未平倉</a></th>
+      <th style="color:#e8323c;text-align:right;white-space:nowrap">多方(口)</th>
+      <th style="color:#00b07a;text-align:right;white-space:nowrap">空方(口)</th>
+      <th style="text-align:right;white-space:nowrap">淨多空</th>
+    </tr></thead>
+    <tbody><tr><td class="wg-ft-date">05/08</td><td style="text-align:right">20,593 <span style="color:#e8323c;font-size:.78em">(+260)</span></td><td style="text-align:right">75,123 <span style="color:#00b07a;font-size:.78em">(+3,658)</span></td><td style="color:#00b07a;font-weight:700;text-align:right">-35,159 <span style="color:#00b07a;font-size:.78em">(-1,024)</span></td></tr><tr><td class="wg-ft-date">05/07</td><td style="text-align:right">20,333 <span style="color:#e8323c;font-size:.78em">(+1,255)</span></td><td style="text-align:right">71,465 <span style="color:#00b07a;font-size:.78em">(+1,420)</span></td><td style="color:#00b07a;font-weight:700;text-align:right">-34,135 <span style="color:#00b07a;font-size:.78em">(-238)</span></td></tr><tr><td class="wg-ft-date">05/06</td><td style="text-align:right">19,078 <span style="color:#00b07a;font-size:.78em">(-1,078)</span></td><td style="text-align:right">70,045 <span style="color:#00b07a;font-size:.78em">(+1,202)</span></td><td style="color:#00b07a;font-weight:700;text-align:right">-33,897 <span style="color:#00b07a;font-size:.78em">(-1,385)</span></td></tr><tr><td class="wg-ft-date">05/05</td><td style="text-align:right">20,156 <span style="color:#00b07a;font-size:.78em">(-1,440)</span></td><td style="text-align:right">68,843 <span style="color:#00b07a;font-size:.78em">(+3,743)</span></td><td style="color:#00b07a;font-weight:700;text-align:right">-32,512 <span style="color:#00b07a;font-size:.78em">(-1,029)</span></td></tr><tr><td class="wg-ft-date">05/04</td><td style="text-align:right">21,596 <span style="color:#e8323c;font-size:.78em">(+2,027)</span></td><td style="text-align:right">65,100 <span style="color:#00b07a;font-size:.78em">(+1,487)</span></td><td style="color:#00b07a;font-weight:700;text-align:right">-31,483 <span style="color:#00b07a;font-size:.78em">(-9)</span></td></tr></tbody>
+  </table>
+</div></div>
+</div>
+
+<div class="sec-title">族群漲跌幅排行（今日）</div>
+<div class="sector-grid">
+  <div class="stbl">
+    <div class="stbl-hdr">台股&nbsp;<span style="color:#e8323c">▲ 前五大漲幅</span></div>
+    <table><tr><td class="rank">#1</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C30026" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">金屬製品</a></td><td style="color:#e8323c;text-align:right">+8.57%</td></tr><tr><td class="rank">#2</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23070" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">IC-通路</a></td><td style="color:#e8323c;text-align:right">+5.85%</td></tr><tr><td class="rank">#3</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23400" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">商業自動化</a></td><td style="color:#e8323c;text-align:right">+5.25%</td></tr><tr><td class="rank">#4</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23010" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">IC-設計</a></td><td style="color:#e8323c;text-align:right">+4.83%</td></tr><tr><td class="rank">#5</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23330" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">工業電腦</a></td><td style="color:#e8323c;text-align:right">+4.54%</td></tr></table>
+  </div>
+  <div class="stbl">
+    <div class="stbl-hdr">台股&nbsp;<span style="color:#00b07a">▼ 前五大跌幅</span></div>
+    <table><tr><td class="rank">#1</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C30021" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">ABF</a></td><td style="color:#00b07a;text-align:right">-8.81%</td></tr><tr><td class="rank">#2</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23050" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">IC-製造</a></td><td style="color:#00b07a;text-align:right">-6.23%</td></tr><tr><td class="rank">#3</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23260" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">網通</a></td><td style="color:#00b07a;text-align:right">-5.57%</td></tr><tr><td class="rank">#4</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C23030" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">記憶體製造</a></td><td style="color:#00b07a;text-align:right">-4.53%</td></tr><tr><td class="rank">#5</td><td><a href="https://www.cmoney.tw/finance/f00072.aspx?t=C30024" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">散熱零組件</a></td><td style="color:#00b07a;text-align:right">-4.40%</td></tr></table>
+  </div>
+  <div class="stbl">
+    <div class="stbl-hdr">美股&nbsp;<span style="color:#e8323c">▲ 前五大漲幅</span></div>
+    <table><tr><td class="rank">#1</td><td><a href="https://finviz.com/screener?v=152&f=sec_technology&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">科技</a></td><td style="color:#e8323c;text-align:right">+2.26%</td></tr><tr><td class="rank">#2</td><td><a href="https://finviz.com/screener?v=152&f=sec_basicmaterials&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">原物料</a></td><td style="color:#e8323c;text-align:right">+1.61%</td></tr><tr><td class="rank">#3</td><td><a href="https://finviz.com/screener?v=152&f=sec_consumercyclical&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">非必需消費</a></td><td style="color:#e8323c;text-align:right">+0.34%</td></tr><tr><td class="rank">#4</td><td><a href="https://finviz.com/screener?v=152&f=sec_realestate&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">不動產</a></td><td style="color:#e8323c;text-align:right">+0.29%</td></tr><tr><td class="rank">#5</td><td><a href="https://finviz.com/screener?v=152&f=sec_consumerdefensive&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">必需消費</a></td><td style="color:#e8323c;text-align:right">+0.09%</td></tr></table>
+  </div>
+  <div class="stbl">
+    <div class="stbl-hdr">美股&nbsp;<span style="color:#00b07a">▼ 前五大跌幅</span></div>
+    <table><tr><td class="rank">#1</td><td><a href="https://finviz.com/screener?v=152&f=sec_healthcare&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">醫療保健</a></td><td style="color:#00b07a;text-align:right">-0.68%</td></tr><tr><td class="rank">#2</td><td><a href="https://finviz.com/screener?v=152&f=sec_energy&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">能源</a></td><td style="color:#00b07a;text-align:right">-0.61%</td></tr><tr><td class="rank">#3</td><td><a href="https://finviz.com/screener?v=152&f=sec_utilities&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">公用事業</a></td><td style="color:#00b07a;text-align:right">-0.52%</td></tr><tr><td class="rank">#4</td><td><a href="https://finviz.com/screener?v=152&f=sec_financial&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">金融</a></td><td style="color:#00b07a;text-align:right">-0.11%</td></tr><tr><td class="rank">#5</td><td><a href="https://finviz.com/screener?v=152&f=sec_communicationservices&o=-volume" target="_blank" style="color:#e6edf3;text-decoration:none" onmouseover="this.style.color='#58a6ff'" onmouseout="this.style.color='#e6edf3'">通訊服務</a></td><td style="color:#00b07a;text-align:right">-0.10%</td></tr></table>
+  </div>
+</div>
+
+<div class="sec-title">重大財經新聞</div>
+<div class="news-box">
+  <ul><li><a href="https://news.google.com/rss/articles/CBMi-AJBVV95cUxQQUlTMm5DQ3hqU2UzbE5QdTFlakE4eDlZVU9vUVlMdmxsdXc1cjQxekI2UkxQWUxxenBxbE1zQnVoRnRoNFB2Wmh1aUUzVWwxOTZVcFhvQXNCdnJVQnh0ZzdranJmSk1yZmlkaFEzTlNZaHA1YVo5c2FMNW5SME5HLTZvdjhWMTYzZFU4ZVJRWVNzdmFDM29HQkltRlpqeW83RkdxVkNDNFRXbU9aSVNIWHAwNWJCcFNZdjBpZUhMRWl1ME1ReTBZZDJzS2kxVWNody11ZWd1c3dXaXlRdUVzVmY4NEpleC10Vkx2bkc0TGNmREpqTmpzREpxa1RkWEJWX25jdTNpVENaZHpvRWN5enYzODRCM0VYRHVTc0pjSDloM1FaZ3R1OEZoejY0NURnWHdOZmdVd3hwQ1FvUU4yWGZzLUZrLWd4dmtIUDN6NzkzS2lwZFliUTdac0pOS2h5Q0swRzJ1QzZNV3RBblJSUlFIRTlObERV?oc=5" target="_blank">台股突崩跌破800點！財經專家：做多即可 點名2族群表現優異 - Yahoo股市</a><span class="ndate">Sun, 10 May 2026 02:11</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nWmhSSzdfY29TMlpLY1RON3IzcHhvdkhveWV0V3MwSlMxRk9jYTA5eEZ2N3RISGpjWk5IY2FPRWhpZlZlN0lJMDBXVHktRXlpLUx3cnRn0gFbQVVfeXFMTW50X2tBVzlRSG84UW9WbHI4YWlocW10d2E2Qm1NanpXM3piYUNCQkQyRktMOERoZC1KYTZUY1RZaUE4TWFoemctdE5FQ0JTaktILVRFekZXLXNJYw?oc=5" target="_blank">財經青紅燈》台股、人均GDP及總市值 - 自由財經</a><span class="ndate">Fri, 08 May 2026 21:30</span></li><li><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5oSk93YnBYSWlKdGdiaXJZYnhsN3dEdlIxWDFUZTE5UGNVLTZBQ3JZdEVuSEFwU3BicjVJRXJYaHh1OEJpUTloNGZXSQ?oc=5" target="_blank">台股季線乖離逾18%創紀錄！投顧示警「羊群效應」勿追高 - FTNN 新聞網</a><span class="ndate">Sun, 10 May 2026 05:00</span></li><li><a href="https://news.google.com/rss/articles/CBMiuAJBVV95cUxOVi1pYko3cS1hNFkxWjFNZ3JGUVVRdXlObVVzeWdCNzdQTUFYSHl4RDRlNDdXWHBvZFpGTXRVZFNQSk5TaGE2b09vOURLS0Q0STd4alFienZiZFN6VG9tX0s4Rkg5TXMzaEZkakdXTncxZFI5U19UQ09hdXFqaHN4OWMwV0hOcnJTeWRYY3ZDcEY5ZzRGSVJneFNESThhU1hJM3NHaFRza1pQTkFRRTV3dHBqYkp2bk9iQ2JhTEJvV013RTN2eEtYTXJmUW5Ya3RGNFF6X3dpYmY5VmpLUjJkQzRoekZmbXNtS2tYYUZLbG9zTU9TSzJwMEJwTkpLakc0cEVEaEQ4RlF5YzRSRDg5M0VSVmd2SlhZZTFHLWR3MnNfZmpiUktzRlZrM0hIQllmLTdmUTBzQ2s?oc=5" target="_blank">台股一直漲自己卻沒賺！ 他盼「崩盤幾天」好進場 網搖頭：你不敢 - Yahoo股市</a><span class="ndate">Fri, 08 May 2026 11:54</span></li><li><a href="https://news.google.com/rss/articles/CBMisgRBVV95cUxQemdhNENueldZaTI3RzdnbTlTMXc2VXA4aHJXN0s3cFZ6UzVtNFhyR2hLWGZkRGMtbHNXNHF4ZXBhT282bHE4RFozMWdSRjhGNnFvanNLLWdNaTdBWnNvVGd6NU93bGRKdEI0Z0ZRVmZxRm9Gc0ZOMjJrYk1EREloVnB3UXVFdFBLR2QySklEdVYwbWtBWkFjRmkwTlhXRGdXOGV3YnRFUWtUQnYyWE5EcjJNUE50bElXaUk4SHV0Q0VPUVhSYlAwNS12NHRTdDNqZGlzcXhvVml6OUNwNnpjUlczWlh2SzZVejNxRndsNFVJbHlVYVFVOWxKbkdwRTVhMXg4RDFXbjRTTFB3WE94Nld1eGpVbTBVZUxBcE5QRkw1bXhrbzhZVloxbUg3OVA3ZlRva29zczJ5UkNLRnZZdHhWaGxVM1A2SkJiS05JMDBoSnBZZHBJNXpmMlk5ZC1sb2xHMzNNOTZIOWx4UGFBZF9ZN3dTRVJBNkVDSWI1R1pCN2p4T1dGdlVwczhXVm9XaHAxS1hZQXhWY0NDNGNKSGpCQkxPNGdUU1hIcW8wOW5YcTFpSldGcG1OVEJ5TFQwS3JEaWdHLVlDMU15UXE3OFJMT21PNFdJTUw0bjZPYjRGOTZScTRJVXVXaWpHUE1oOVFDemN5VU1xaWNMVjk5U3FaQ0F6R3pic0lBTjV5YnZFUG5iSUlrVmEzUFNZRDUxVmdkWFNIQjdfVkV0RkEtUlZR?oc=5" target="_blank">費半、韓股雙創歷史新高！看懂AI供應鏈挖金礦：一表掌握台美韓ETF標的與主動式ETF 投資攻略｜豐雲學堂2026 年 05 月 - sinotrade.com.tw</a><span class="ndate">Sat, 09 May 2026 05:45</span></li><li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE13S3haSjNKOU1kZzBKQk5PS2dzd3hObkhBLXdadi03OHo0dmlCZGlvbVFXSUg3MmRzVFJCMzJ0bEYtX1JCaktyRE14dHJRMFk?oc=5" target="_blank">《巴隆》五大訊號顯示 半導體瘋漲過頭 - news.cnyes.com</a><span class="ndate">Thu, 07 May 2026 05:10</span></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNcktKS09ySEE5bDN1Q2J0YTBJOG5RdkJncjZ0OWUwbzhzSUpadUdaNnItRWZoUW5wWEFUS3BxOUxxOE9TclowNG1CVmk1ZHBhZi0tMU9YMDh4ejJkZDZZaU5PM3BwNDd4Q242SkRfVFA1cVhkanl2TTRKSmlqbzg3a2NFaFF0dDlLSHI5U1h5RnAzbXpGS05EOHp3?oc=5" target="_blank">美國AI半導體股票未來展望・漲幅排名前十 - Moomoo</a><span class="ndate">Thu, 30 Apr 2026 07:00</span></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNamF0WWxCd09MSkw5MUZqQnFrQi1LVXVCM0swcG04MGEzTC1uaDFqQk1BRzdJa0FMS3hteVZNUHdIUGJ6LU5jM0NxdEh5bXFJOGRzdGZoTmlxaUlxaUpoeE16a3BJMUQwdGNvOXdzQUtsNmtjWmZqbGJKRGZfd2t5V1o3VVhNNlBaeEM3ZHNR?oc=5" target="_blank">【美股盤勢】半導體全面爆發，AMD飆18%憑什麼？市場搶先押注下一輪AI行情（2026.05.07） - CMoney投資網誌</a><span class="ndate">Wed, 06 May 2026 23:01</span></li></ul>
+</div>
+
+<div class="footer">
+  資料來源：Yahoo Finance ／ CMoney ／ Finviz ／ Google News<br>
+  本報告僅供參考，不構成投資建議
+</div>
+
+</body>
+</html>
